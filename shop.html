@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xenosoft — Store</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #171717;
+    color: #eeeeee;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 76px;
+    background: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 4px 15px rgba(0,0,0,.6);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.logo span {
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+nav a {
+    color: #c7c7c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: white;
+}
+
+nav a.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 7px;
+}
+
+main {
+    max-width: 1120px;
+    margin: 60px auto;
+    padding: 0 25px;
+    flex: 1;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 38px;
+    font-weight: 200;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 45px;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: #303030;
+    padding: 30px;
+    border: 1px solid #444;
+    box-shadow: 0 8px 25px rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.product-card .price {
+    font-size: 26px;
+    font-weight: 300;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.product-card p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.btn-buy {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #555;
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    transition: background .2s, color .2s;
+}
+
+.btn-buy:hover {
+    background: #777;
+    color: #fff;
+}
+
+/* Error Page View via innerHTML */
+.error-container {
+    background: #303030;
+    padding: 50px;
+    border: 1px solid #444;
+    box-shadow: 0 12px 35px rgba(0,0,0,.7);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.error-container h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: #ff6b6b;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+}
+
+.error-container p {
+    color: #bbb;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.error-container .soda-box {
+    background: #222;
+    border-left: 4px solid #28a745;
+    padding: 15px 20px;
+    margin: 30px 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e5e5e5;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    transition: background .2s;
+}
+
+.btn-back:hover {
+    background: #fff;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    padding: 30px;
+    background: #111;
+    margin-top: auto;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,.5);
+}
+
+footer nav {
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+footer nav a {
+    color: #777;
+    font-size: 12px;
+}
+
+footer nav a:hover {
+    color: #bbb;
+}
+
+@media (max-width: 750px) {
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    main {
+        margin-top: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><span>XENO</span>SOFT</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#" class="active">Products</a>
+        <a href="#">Login</a>
+    </nav>
+</header>
+
+<main id="app-content">
+    <h1 class="page-title">Legacy Store</h1>
+    <p class="subtitle">
+        Looking for standalone licenses? Purchase previous non-subscription versions of UserPacn below.
+    </p>
+
+    <section class="products-grid">
+
+        <!-- 2018 -->
+        <article class="product-card">
+            <div>
+                <h2>UserPacn 2018</h2>
+                <div class="price">US$312</div>
+                <p>Perpetual license · Legacy support</p>
+            </div>
+            <button class="btn-buy" onclick="renderErrorPage('UserPacn 2018')">Buy Now</button>
+        </article>
+
+        <!-- 2017 -->
+        <article class="product-card">
+            <div>
+                <h2>UserPacn 2017</h2>
+                <div class="price">US$280</div>
+                <p>Perpetual license · Legacy support</p>
+            </div>
+            <button class="btn-buy" onclick="renderErrorPage('UserPacn 2017')">Buy Now</button>
+        </article>
+
+        <!-- 2016 -->
+        <article class="product-card">
+            <div>
+                <h2>UserPacn 2016</h2>
+                <div class="price">US$250</div>
+                <p>Perpetual license · Extended offline mode</p>
+            </div>
+            <button class="btn-buy" onclick="renderErrorPage('UserPacn 2016')">Buy Now</button>
+        </article>
+
+        <!-- 2015 -->
+        <article class="product-card">
+            <div>
+                <h2>UserPacn 2015</h2>
+                <div class="price">US$210</div>
+                <p>Perpetual license · Classic UI</p>
+            </div>
+            <button class="btn-buy" onclick="renderErrorPage('UserPacn 2015')">Buy Now</button>
+        </article>
+
+        <!-- 2012 -->
+        <article class="product-card">
+            <div>
+                <h2>UserPacn 2012</h2>
+                <div class="price">US$150</div>
+                <p>Perpetual license ·Vintage build</p>
+            </div>
+            <button class="btn-buy" onclick="renderErrorPage('UserPacn 2012')">Buy Now</button>
+        </article>
+
+        <!-- 2009 -->
+        <article class="product-card">
+            <div>
+                <h2>UserPacn 2009</h2>
+                <div class="price">US$99</div>
+                <p>Perpetual license · Requires Windows 7</p>
+            </div>
+            <button class="btn-buy" onclick="renderErrorPage('UserPacn 2009')">Buy Now</button>
+        </article>
+
+        <!-- 2006 -->
+        <article class="product-card">
+            <div>
+                <h2>UserPacn 2006</h2>
+                <div class="price">US$49</div>
+                <p>Perpetual license · Retro edition</p>
+            </div>
+            <button class="btn-buy" onclick="renderErrorPage('UserPacn 2006')">Buy Now</button>
+        </article>
+
+    </section>
+</main>
+
+<footer>
+    <nav>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Support</a>
+    </nav>
+    <p>© 2019 Xenosoft Corporation. All rights reserved.</p>
+</footer>
+
+<script>
+function renderErrorPage(itemName) {
+    const mainContainer = document.getElementById('app-content');
+    
+    mainContainer.innerHTML = `
+        <div class="error-container">
+            <h2>Unable to purchase ${itemName}</h2>
+            <p>
+                We deeply regret to inform you that our global legacy transaction gateways, payment routing clusters, and vintage license validation nodes are completely unavailable at this exact moment. 
+            </p>
+            <p>
+                Due to an unforeseen synchronization anomaly between our modern subscription billing core and the archaic architecture required to process perpetual single-purchase licenses from past decades, our financial database has entered a temporary state of existential confusion. Our senior engineering team is currently looking into the matter—or possibly taking an extended coffee break until someone figures out how database normalization worked back in the late 2000s.
+            </p>
+            <p>
+                Until this situation is resolved (which could take anywhere from a few minutes to several business epochs), direct online purchases for this software edition remain strictly disabled. We humbly suggest converting your workflow to our modern subscription packages, or simply contemplating the passage of time.
+            </p>
+            
+            <div class="soda-box">
+                🥤 Here is a soda.
+            </div>
+
+            <a href="shop.html" class="btn-back">← Back to Store</a>
+        </div>
+    `;
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
