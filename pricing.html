@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Xenosoft — Pricing</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #171717;
+    color: #eeeeee;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    height: 76px;
+    background: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 3px 12px rgba(0,0,0,.35);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.logo span {
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+nav a {
+    color: #c7c7c7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color .2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: white;
+}
+
+nav a.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 7px;
+}
+
+main {
+    max-width: 1120px;
+    margin: 75px auto;
+    padding: 0 25px;
+}
+
+.page-title {
+    font-size: 38px;
+    font-weight: 200;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 45px;
+}
+
+.plans {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.card {
+    background: #303030;
+    padding: 34px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+    flex: 1;
+}
+
+.card.featured {
+    border-top: 3px solid #d5d5d5;
+    flex: 1.35;
+}
+
+.card h1 {
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.price small {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.card h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 14px;
+    padding: 11px 0;
+    border-bottom: 1px solid #444;
+    color: #dedede;
+}
+
+li::before {
+    content: "✓";
+    color: #bdbdbd;
+    margin-right: 12px;
+}
+
+.old-plan {
+    flex: .85;
+    opacity: .75;
+}
+
+.old-plan h1 {
+    font-size: 25px;
+}
+
+.old-plan .price {
+    font-size: 27px;
+}
+
+.old-plan li.disabled {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.old-plan li.disabled::before {
+    content: "×";
+    color: #777;
+}
+
+.old-plan .note {
+    color: #777;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.action-button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 13px 20px;
+    background: #e5e5e5;
+    color: #222;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background .2s, color .2s;
+}
+
+.action-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.old-plan .action-button {
+    background: #555;
+    color: #eee;
+}
+
+.old-plan .action-button:hover {
+    background: #777;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    padding: 30px;
+    margin-top: 80px;
+}
+
+@media (max-width: 750px) {
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .plans {
+        flex-direction: column;
+    }
+
+    main {
+        margin-top: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><span>XENO</span>SOFT</div>
+
+    <nav>
+        <a href="#" class="active">Pricing</a>
+        <a href="#">Products</a>
+        <a href="#">Login</a>
+    </nav>
+</header>
+
+<main>
+    <h1 class="page-title">Pricing</h1>
+    <p class="subtitle">
+        Choose the UserPacn plan that works for you.
+    </p>
+
+    <section class="plans">
+
+        <article class="card featured">
+            <h1>UserPacn 2019</h1>
+
+            <div class="price">
+                US$29<small>/mo</small>
+            </div>
+
+            <h2>Included benefits</h2>
+
+            <ul>
+                <li>All UserPacn programs</li>
+                <li>200 GB cloud storage</li>
+                <li>Cloud compiling</li>
+                <li>Automatic updates</li>
+                <li>All DesignSuite programs included</li>
+                <li>XOS included</li>
+            </ul>
+
+            <a href="assign.html" class="action-button">
+                Subscribe
+            </a>
+        </article>
+
+        <article class="card old-plan">
+            <h1>UserPacn 2018</h1>
+
+            <div class="price">
+                US$312
+            </div>
+
+            <h2>Included benefits</h2>
+
+            <ul>
+                <li>All UserPacn programs</li>
+                <li>All DesignSuite programs included</li>
+                <li>XOS included</li>
+                <li class="disabled">200 GB cloud storage</li>
+                <li class="disabled">Cloud compiling</li>
+                <li class="disabled">Automatic updates</li>
+            </ul>
+
+            <p class="note">
+                Perpetual license · No subscription
+            </p>
+
+            <a href="shop.html" class="action-button">
+                Buy
+            </a>
+        </article>
+
+    </section>
+</main>
+
+<footer>
+    © 2019 Xenosoft Corporation. All rights reserved.
+</footer>
+
+</body>
+</html>
