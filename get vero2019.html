@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xenosoft — Subscription Concluded</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #171717;
+    color: #eeeeee;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header {
+    height: 76px;
+    background: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 5px 22px rgba(0,0,0,.65);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.logo span {
+    font-weight: 700;
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 25px;
+}
+
+.success-container {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    background: #292929;
+    padding: 65px 45px;
+    border-top: 3px solid #28a745;
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.6),
+        0 5px 15px rgba(0,0,0,.35);
+}
+
+.success-icon {
+    width: 72px;
+    height: 72px;
+    border: 2px solid #28a745;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    box-shadow: 0 5px 20px rgba(40,167,69,.2);
+}
+
+.success-icon svg {
+    width: 38px;
+    height: 38px;
+    stroke: #28a745;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.description {
+    font-size: 16px;
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #28a745;
+    color: white;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 7px 22px rgba(0,0,0,.45);
+    transition: .2s;
+}
+
+.download-button:hover {
+    background: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.6);
+}
+
+.download-button svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.version {
+    margin-top: 30px;
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    padding: 30px;
+    background: #111;
+    box-shadow: 0 -5px 20px rgba(0,0,0,.4);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .success-container {
+        padding: 45px 22px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .download-button {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><span>XENO</span>SOFT</div>
+</header>
+
+<main>
+
+    <section class="success-container">
+
+        <div class="success-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M5 12l5 5L20 7"/>
+            </svg>
+        </div>
+
+        <h1>Subscribe concluded!</h1>
+
+        <p class="description">
+            Your subscription has been successfully completed.
+            Now you can download Vero 2019.
+        </p>
+        <a
+            class="download-button"
+            href="https://drive.google.com/uc?export=download&id=12cItXFlyadKQZtXY0vgo8wx9KIgBJw1A"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <svg viewBox="0 0 24 24">
+                <path d="M12 3v12"/>
+                <path d="M7 10l5 5 5-5"/>
+                <path d="M5 20h14"/>
+            </svg>
+
+            Download Vero 2019
+        </a>
+
+        <div class="version">
+            XENOSOFT USERPACN 2019 · VERO 2019
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2019 Xenosoft Corporation. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
