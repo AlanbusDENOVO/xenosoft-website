@@ -169,6 +169,53 @@ main {
     line-height: 1.5;
 }
 
+/* Additional Suite Overview Grid */
+.suite-overview {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.suite-overview h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.suite-overview p.subtitle {
+    color: #aaa;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.app-card {
+    background: #252525;
+    padding: 24px;
+    border: 1px solid #383838;
+    text-align: left;
+}
+
+.app-card h4 {
+    font-size: 18px;
+    color: #28a745;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.app-card p {
+    color: #b0b0b0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
 /* FAQ Section */
 .faq-section {
     background: #222;
@@ -287,11 +334,11 @@ footer nav a:hover {
 
     <!-- Main Product Section -->
     <section class="products-preview">
-        <img src="all_products.png" alt="All UserPacn Programss">
+        <img src="all_products.png" alt="All UserPacn Programs">
         
         <h2>All your programs. In a single subscription.</h2>
         <p>
-            We decided that our suckers— err, our valued customers are going to pay a monthly subscription now. Yaaay, we're gonna be rich!
+            Experience complete creative freedom with UserPacn 2019. Access our full suite of professional video, vector, graphic, and audio production tools for one flat rate of $20.00/month.
         </p>
 
         <a href="pricing.html" class="btn-green">
@@ -306,15 +353,48 @@ footer nav a:hover {
     <section class="features">
         <div class="feature-card">
             <h3>Cloud Integration</h3>
-            <p>Access your files anywhere with our secure cloud infrastructure built for seamless workflow execution.</p>
+            <p>Access your project files seamlessly anywhere with our secure cloud infrastructure built for high-performance workflow execution.</p>
         </div>
         <div class="feature-card">
             <h3>Always Up-to-Date</h3>
-            <p>Never worry about manual upgrades again. The subscription model forces— we mean, enables seamless background updates.</p>
+            <p>Never worry about manual upgrades again. The continuous deployment model delivers automatic feature updates directly to your workstation.</p>
         </div>
         <div class="feature-card">
             <h3>Enterprise Support</h3>
-            <p>Our dedicated team is ready 24/7 to address any system issues and help you stay productive.</p>
+            <p>Our dedicated technical team is ready 24/7 to address hardware integration issues and ensure uninterrupted production productivity.</p>
+        </div>
+    </section>
+
+    <!-- Applications Included Grid Section -->
+    <section class="suite-overview">
+        <h2>What's Included in UserPacn 2019</h2>
+        <p class="subtitle">Six industry-standard creative engines fully integrated into one synchronized desktop environment.</p>
+
+        <div class="apps-grid">
+            <div class="app-card">
+                <h4>EditorMax 2019</h4>
+                <p>Hybrid video editing and motion graphic suite engineered for fast timeline rendering and high-resolution pipeline export.</p>
+            </div>
+            <div class="app-card">
+                <h4>Vero 2019</h4>
+                <p>Professional photo manipulation and raster editing environment with full multi-layer compositing and color management.</p>
+            </div>
+            <div class="app-card">
+                <h4>InVector 2019</h4>
+                <p>Precision vector graphics editor built for branding, complex typography layouts, and scalable digital illustrations.</p>
+            </div>
+            <div class="app-card">
+                <h4>SoundWave 2019</h4>
+                <p>Digital audio workstation featuring multi-track mixing, sound design tools, and real-time audio filter processing.</p>
+            </div>
+            <div class="app-card">
+                <h4>PhotoGallery 2019</h4>
+                <p>Centralized digital asset management system for cataloging, tagging, and organizing media production libraries.</p>
+            </div>
+            <div class="app-card">
+                <h4>Sola 2019</h4>
+                <p>High-speed document layout and interactive digital publishing platform for print and online media.</p>
+            </div>
         </div>
     </section>
 
@@ -323,23 +403,23 @@ footer nav a:hover {
         <h2>Frequently Asked Questions</h2>
 
         <div class="faq-item">
-            <div class="faq-question">Q: Can I still purchase UserPacn 2018, even though I can subscribe to UserPacn 2019?</div>
-            <div class="faq-answer">A: Yes, you can still buy UserPacn 2018 and previous standalone versions through our Store page.</div>
+            <div class="faq-question">Q: Can I still purchase UserPacn 2018 standalone licenses?</div>
+            <div class="faq-answer">A: Yes. Legacy standalone licenses for UserPacn 2018 and prior versions remain available for purchase on our Store page.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Q: Can I cancel my UserPacn 2019 subscription at any time?</div>
-            <div class="faq-answer">A: You sure can! Though we might make you go through 14 confirmation screens and a survey first.</div>
+            <div class="faq-answer">A: Absolutely. You can manage or cancel your subscription anytime directly through your Xenosoft Account dashboard with no cancellation fees.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">Q: What happens to my files if I stop paying the subscription?</div>
-            <div class="faq-answer">A: Your files remain yours, but good luck opening them without our software!</div>
+            <div class="faq-question">Q: What happens to my project files if my subscription expires?</div>
+            <div class="faq-answer">A: Your files remain entirely yours and are stored locally. While an active subscription is required to edit them within Xenosoft apps, your raw exports and data remain intact.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Q: Is offline access supported in UserPacn 2019?</div>
-            <div class="faq-answer">A: You can work offline for up to 30 days before our servers start missing you and request an internet connection.</div>
+            <div class="faq-answer">A: Yes. You can work fully offline for up to 30 consecutive days. The system only requires a brief internet connection once a month to verify your active subscription status.</div>
         </div>
     </section>
 </main>
